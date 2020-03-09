@@ -1,0 +1,8 @@
+description = "Retrieve data from whatever source (db, 3rd party, etc.)"
+
+dependencies {
+    implementation project(":application:core")
+    implementation libs.database
+
+    testImplementation libs.unit_tests
+}
