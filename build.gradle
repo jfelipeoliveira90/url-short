@@ -36,7 +36,10 @@ subprojects {
             ],
 
             micronaut       : [
-                    "io.micronaut:micronaut-core:${micronaut_version}"
+                    "io.micronaut:micronaut-runtime:${micronaut_version}",
+                    "io.micronaut:micronaut-core:${micronaut_version}",
+                    "io.micronaut:micronaut-inject-java:${micronaut_version}",
+                    "io.micronaut:micronaut-validation:${micronaut_version}"
             ],
 
             database        : [
@@ -44,7 +47,8 @@ subprojects {
             ],
 
             rest            : [
-                    "io.micronaut:micronaut-http-server-netty:${micronaut_version}"
+                    "io.micronaut:micronaut-http-server-netty:${micronaut_version}",
+                    "io.micronaut:micronaut-http-client:${micronaut_version}"
             ],
 
             rpc             : [
@@ -53,15 +57,27 @@ subprojects {
 
             log             : [
                     "ch.qos.logback:logback-classic:1.2.3"
+            ],
+
+            kapt_micronaut  : [
+                    "io.micronaut:micronaut-inject-java:${micronaut_version}",
+                    "io.micronaut:micronaut-validation:${micronaut_version}",
+                    "io.micronaut.configuration:micronaut-openapi:${micronaut_version}"
             ]
     ]
 
     apply plugin: "java"
     apply plugin: "org.jetbrains.kotlin.jvm"
     apply plugin: "org.jetbrains.kotlin.kapt"
+    apply plugin: "org.jetbrains.kotlin.plugin.allopen"
 
     dependencies {
         implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
+        implementation "org.jetbrains.kotlin:kotlin-reflect"
+    }
+
+    allOpen {
+        annotation("io.micronaut.aop.Around")
     }
 
     compileKotlin {

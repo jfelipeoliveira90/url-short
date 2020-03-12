@@ -2,11 +2,11 @@ description = "Wires the application together."
 
 apply plugin: "application"
 
-application {
-    mainClassName = 'br.com.jfelipe.urlshort.Application'
-}
+mainClassName = 'br.com.jfelipe.urlshort.Application'
 
 dependencies {
+    kapt libs.kapt_micronaut
+
     implementation project(":application:core")
     implementation project(":application:dataproviders")
     implementation project(":application:entrypoints")

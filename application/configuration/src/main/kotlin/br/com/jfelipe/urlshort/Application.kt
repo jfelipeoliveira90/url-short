@@ -6,9 +6,6 @@ object Application {
 
     @JvmStatic
     fun main(args: Array<String>) {
-        Micronaut.build()
-            .packages("br.com.jfelipe.urlshort")
-            .mainClass(Application.javaClass)
-            .start()
+        Micronaut.run(Application.javaClass)
     }
 }

@@ -1,1 +1,0 @@
-/Users/felipeoliveira/Dev/src/url-short/application/entrypoints/build/classes/kotlin/main/br/com/jfelipe/urlshort/entrypoints/rest/url/UrlDTO.class:/Users/felipeoliveira/Dev/src/url-short/application/entrypoints/build/classes/kotlin/main/br/com/jfelipe/urlshort/entrypoints/rest/url/UrlEndpoint.class

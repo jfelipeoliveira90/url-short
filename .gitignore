@@ -80,6 +80,11 @@ Temporary Items
 ### Gradle template
 .gradle
 /build/
+/application/build/
+/application/configuration/build/
+/application/core/build/
+/application/dataproviders/build/
+/application/entrypoints/build/
 
 # Ignore Gradle GUI config
 gradle-app.setting
@@ -164,3 +169,5 @@ fabric.properties
 .idea/caches/build_file_checksums.ser
 
 /.idea/
+build/
+build/
