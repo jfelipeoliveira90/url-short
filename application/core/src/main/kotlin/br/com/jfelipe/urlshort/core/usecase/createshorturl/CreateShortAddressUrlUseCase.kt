@@ -10,7 +10,7 @@ class CreateShortAddressUrlUseCase(private val insertUrl: InsertUrl) {
         val md = MessageDigest.getInstance("MD5")
         md.update(fullAddress.plus(Random().nextInt()).toByteArray())
 
-        val shortAddress = Base64.getEncoder()
+        val shortAddress = Base64.getUrlEncoder()
             .encodeToString(md.digest())
             .substring(0, 6)
 
