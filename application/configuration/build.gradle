@@ -1,8 +1,16 @@
 description = "Wires the application together."
 
 apply plugin: "application"
+apply plugin: "com.google.cloud.tools.jib"
 
 mainClassName = 'br.com.jfelipe.urlshort.Application'
+
+jib {
+    to.image = 'felipk9/url-short'
+    from.image = 'openjdk:8-alpine'
+    container.mainClass = 'br.com.jfelipe.urlshort.Application'
+    container.creationTime = 'USE_CURRENT_TIMESTAMP'
+}
 
 dependencies {
     kapt libs.kapt_micronaut
