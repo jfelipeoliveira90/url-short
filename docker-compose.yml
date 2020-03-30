@@ -1,0 +1,17 @@
+version: '3.3'
+services:
+  url-short:
+    image: "felipk9/url-short"
+    ports:
+      - "8080:8080"
+    environment: 
+      - REDIS_HOST=redis://redis:6379
+    depends_on:
+      - redis
+    links:
+      - redis
+  
+  redis:
+    image: "redis"
+    ports:
+      - "6379:6379"
