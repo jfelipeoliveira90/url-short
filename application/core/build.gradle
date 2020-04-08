@@ -1,5 +1,9 @@
 description = "Entities (domain objects) and uses cases that implement the business logic"
 
+test {
+    useJUnitPlatform()
+}
+
 dependencies {
     testImplementation libs.unit_tests
 }
