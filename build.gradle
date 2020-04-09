@@ -60,6 +60,11 @@ subprojects {
                     "ch.qos.logback:logback-classic:1.2.3"
             ],
 
+            commons         : [
+                    "commons-validator:commons-validator:1.6",
+                    "commons-codec:commons-codec:1.14"
+            ],
+
             kapt_micronaut  : [
                     "io.micronaut:micronaut-inject-java:${micronaut_version}",
                     "io.micronaut:micronaut-validation:${micronaut_version}"
