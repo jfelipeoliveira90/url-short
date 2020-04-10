@@ -21,7 +21,8 @@ subprojects {
     ext.libs = [
             unit_tests      : [
                     "org.junit.jupiter:junit-jupiter:5.+",
-                    "com.nhaarman:mockito-kotlin:1.6.+"
+                    "com.nhaarman:mockito-kotlin:1.6.+",
+                    "org.mockito:mockito-inline:3.3.+"
             ],
 
             acceptance_tests: [
