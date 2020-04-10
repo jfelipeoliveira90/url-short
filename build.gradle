@@ -100,4 +100,8 @@ subprojects {
             javaParameters = true
         }
     }
+
+    test {
+        useJUnitPlatform()
+    }
 }
