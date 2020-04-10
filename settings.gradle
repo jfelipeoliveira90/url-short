@@ -5,3 +5,6 @@ include 'application:core'
 include 'application:dataproviders'
 include 'application:configuration'
 include 'application:entrypoints'
+
+// testing
+include 'acceptance-tests'
