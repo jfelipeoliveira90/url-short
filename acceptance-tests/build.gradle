@@ -1,0 +1,18 @@
+description = "Acceptance Tests for the BDD cycle (objective: have conversaions and demonstrate requirements)"
+
+apply plugin: "com.tngtech.jgiven.gradle-plugin"
+
+test.finalizedBy jgivenTestReport
+
+dependencies {
+    kapt libs.kapt_micronaut
+
+    implementation project(":application:core")
+    implementation project(":application:dataproviders")
+    implementation project(":application:entrypoints")
+
+    implementation libs.rest
+
+    testImplementation libs.unit_tests
+    testImplementation libs.acceptance_tests
+}
