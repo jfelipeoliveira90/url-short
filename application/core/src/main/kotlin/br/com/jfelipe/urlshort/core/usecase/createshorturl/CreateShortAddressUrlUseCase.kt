@@ -5,9 +5,9 @@ import org.apache.commons.codec.binary.Base64.encodeBase64URLSafeString
 import java.security.MessageDigest
 import java.util.*
 
-class CreateShortAddressUrlUseCase(private val insertUrl: InsertUrl) {
+open class CreateShortAddressUrlUseCase(private val insertUrl: InsertUrl) {
 
-    fun createShortAddressUrl(fullAddress: String): String {
+    open fun createShortAddressUrl(fullAddress: String): String {
         val md = MessageDigest.getInstance("MD5")
         md.update(fullAddress.plus(Random().nextInt()).toByteArray())
 
