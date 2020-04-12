@@ -1,6 +1,6 @@
 package br.com.jfelipe.urlshort.configuration
 
-import br.com.jfelipe.urlshort.dataproviders.url.UrlRedisDataProvider
+import br.com.jfelipe.urlshort.dataproviders.database.url.UrlRedisDataProvider
 import io.lettuce.core.api.StatefulRedisConnection
 import io.micronaut.context.annotation.Factory
 import javax.inject.Singleton
@@ -9,5 +9,6 @@ import javax.inject.Singleton
 class DatabaseDataProviderFactory {
 
     @Singleton
-    fun urlRedisDataProvider(connection: StatefulRedisConnection<String, String>) = UrlRedisDataProvider(connection)
+    fun urlRedisDataProvider(connection: StatefulRedisConnection<String, String>) =
+        UrlRedisDataProvider(connection)
 }
