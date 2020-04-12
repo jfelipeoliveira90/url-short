@@ -52,7 +52,7 @@ class UrlEndpointTest {
     fun `Should return not found`() {
         val notFound = urlEndpoint.notFound(
             POST(URI.create(""), UrlDTO("", "")),
-            UrlNotFoundException("")
+            UrlNotFoundException()
         )
 
         assertAll(
