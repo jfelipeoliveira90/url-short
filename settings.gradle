@@ -8,3 +8,5 @@ include 'application:entrypoints'
 
 // testing
 include 'acceptance-tests'
+include 'integration-tests'
+
