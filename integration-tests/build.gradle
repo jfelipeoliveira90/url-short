@@ -1,0 +1,18 @@
+description = "Integration Tests for checking the entrypoints and dataproviders"
+
+dependencies {
+    kapt libs.kapt_micronaut
+
+    implementation project(":application:configuration")
+    implementation project(":application:entrypoints")
+    implementation project(":application:dataproviders")
+    implementation project(":application:core")
+
+    implementation libs.micronaut
+    implementation libs.database
+    implementation libs.rest
+
+    kaptTest libs.kapt_micronaut
+    testImplementation libs.unit_tests
+    testImplementation libs.integration_test
+}
