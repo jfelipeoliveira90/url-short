@@ -43,6 +43,15 @@ class UrlEndpoint(
     }
 
     @Error
+    fun badRequest(request: HttpRequest<*>, e: IllegalArgumentException): HttpResponse<JsonError> {
+        val error = JsonError(e.message)
+            .link(SELF, Link.of(request.uri))
+
+        return HttpResponse.badRequest<JsonError>()
+            .body(error)
+    }
+
+    @Error
     fun notFound(request: HttpRequest<*>, e: UrlNotFoundException): HttpResponse<JsonError> {
         val error = JsonError(e.message)
             .link(SELF, Link.of(request.uri))
