@@ -1,4 +1,4 @@
-package br.com.jfelipe.urlshort.dataproviders.url
+package br.com.jfelipe.urlshort.dataproviders.database.url
 
 import br.com.jfelipe.urlshort.core.entity.Url
 import com.nhaarman.mockito_kotlin.any
