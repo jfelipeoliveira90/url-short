@@ -95,6 +95,25 @@ connection: close
 
 ### Erros
 
+Bad Request
+```http
+HTTP/1.1 400 Bad Request
+Date: Sun, 12 Apr 2020 14:55:32 GMT
+content-type: application/json
+content-length: 83
+connection: close
+
+{
+  "message": "Url is not valid",
+  "_links": {
+    "self": {
+      "href": "/urls",
+      "templated": false
+    }
+  }
+}
+```
+
 Not Found
 ```http
 HTTP/1.1 404 Not Found
